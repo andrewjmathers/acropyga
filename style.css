@@ -1,0 +1,296 @@
+*{
+
+	padding: 0;
+	margin: 0;
+}
+
+#particles-js{
+
+position: absolute;
+height: 100%;
+width: 100%;
+overflow: hidden;
+z-index: -100;
+}
+
+
+#wrapper{
+
+	display: grid;
+	width: 100%;
+	min-width: 900px;
+	height: 2300px;
+	grid-template-rows: 0.75fr 5fr 6fr 6fr 0.75fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas: "head head head head"
+	"slide slide slide slide"
+	"service service service service"
+	"contact contact contact contact"
+	"footah footah footah footah";
+}
+
+
+
+#header{
+
+	grid-area: head;
+	display: grid;
+	grid-template-columns: 1fr 2fr 4fr 2fr 2fr 2fr 1fr;
+	grid-template-areas: " . image . button1 button2 button3 .";
+	background-color: black;
+	align-items: center;
+	justify-content: center;
+	
+}
+#header .ul{
+
+	color: white;
+	
+	
+}
+
+.ul{
+
+	justify-self: flex-end;
+	overflow: hidden;
+	font-size: 16px;
+	letter-spacing: 4px;
+	text-decoration: none;
+}
+
+.huno{
+
+	grid-area: button1;
+}
+.hdos{
+
+	grid-area: button2;
+}
+
+.htres{
+
+	grid-area: button3;
+}
+
+
+#header img{
+
+	grid-area: image;
+	height: 39px;
+	width: 160px;
+}
+
+
+#slideshow{
+
+	grid-area: slide;
+	background-color: #1e1e1e;
+	display: grid;
+	grid-template-areas: ". sliderShows .";
+	grid-template-columns: 1fr 18fr 1fr;
+	align-items: center;
+	justify-content: center;
+}
+
+
+#imageShow{
+
+	grid-area: sliderShows;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 100%;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 2fr 18fr 2fr;
+	grid-template-areas: " arBck . arFwd ";
+	align-items: center;
+
+}
+
+#arrowBack, #arrowFwd{
+
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+    background-color: rgba(255,255,255, 0.7);
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#arrowBack{
+
+	grid-area: arBck;
+	justify-self: center;
+}
+
+#arrowFwd{
+
+	grid-area: arFwd;
+	justify-self: center;
+	
+}
+
+
+#services{
+
+	grid-area: service;
+	display: grid;
+	align-items: center;
+	grid-template-rows: 1fr 3fr 2fr;
+	grid-template-columns: 1fr 4fr 1fr;
+	grid-template-areas: ". header . "
+	". contento ."
+	"  images images images";
+}
+
+#innerImg{
+
+width: 100%;
+
+}
+
+.servImg{
+
+	grid-area: images;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-auto-rows: 1fr;
+	justify-items: center;
+	align-items:  flex-start;
+
+}
+
+#services img{
+
+	width: 300px;
+	height: 149px;
+	z-index: 100;
+
+}
+
+#contact h1{
+
+	color: white;
+	font-family: Times, Times New Roman, Georgia, serif;
+}
+
+#services h1, #contact h1{
+	display: grid;
+	text-align: center;
+	grid-area: header;
+	justify-self: center;
+	align-self: flex-end;
+	font-size: 43px;
+	letter-spacing: 6px;
+  	font-family: 'Merriweather', serif;
+  	z-index: 100;
+}
+
+.serveBorder{
+
+	padding-top: 5px;
+	width: 70%;
+	justify-self: center;
+}
+
+.first{
+
+	border-bottom: 2px solid #998675;
+
+}
+
+.second{
+
+		border-bottom: 2px solid white;
+}
+
+
+#services p, #contact p{
+
+	grid-area: contento;
+	text-align: center;
+	font-size: 24px;
+	line-height: 29px;
+    color: #7F7F7F;
+    font-family: Times, Times New Roman, Georgia, serif;
+    z-index: 100;
+
+}	
+
+#contact{
+
+	grid-area: contact;
+	background-color: #1C1C2C;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows:  1fr 2fr 1fr;
+	grid-template-areas: 
+	"contactHead contactHead contactHead contactHead"
+	"paraHead paraHead paraHead paraHead"
+	"paraImg paraImg paraImg paraImg ";
+
+}
+
+#contact h1{
+
+	grid-area: contactHead;
+	
+
+
+}
+
+#contact p{
+	display: grid;
+	grid-area: paraHead;
+	align-self: center;
+
+
+}
+
+#conImg{
+
+grid-area: paraImg;
+align-self: flex-start;
+justify-self: center;
+	
+}
+
+#footer{
+
+	grid-area: footah;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 1fr 7fr 7fr 1fr;
+	grid-template-areas: ". two one .";
+	align-items: center;
+
+}
+
+#footer p{
+
+	color: white;
+	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+	
+}
+
+
+
+#pTwo{
+
+grid-area: two;
+justify-self: start;
+
+
+}
+
+#pOne{
+
+	text-decoration: none;
+	grid-area: one;
+	justify-self: end;
+}
