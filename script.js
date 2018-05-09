@@ -28,7 +28,7 @@ $('#imageShow').css('background-image', 'url(' + slideImg[assignedImage] + ')');
 
 }
 
-var slideImg = ["./media/slide2.jpg","./media/slide1.jpg","./media/slide3.jpg"];
+var slideImg = ["./Media/slide2.jpg","./Media/slide1.jpg","./Media/slide3.jpg"];
 $('#imageShow').css('background-image', 'url(' + slideImg[assignedImage] + ')');
 
 if(e && e.type == "click" && e.target.id == "arrowFwd"){
